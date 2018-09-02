@@ -6,7 +6,7 @@ const removeExistingBlogs = oldBlogs => newBlog => {
 };
 
 /**
- * Add new blogs to beginning of JSON file.
+ * Add new blogs to beginning of JSON file
  *
  * @param {Array} newBlogs
  * @returns {Promise}

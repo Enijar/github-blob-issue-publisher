@@ -11,6 +11,13 @@ const formatIssues = issue => {
     return {id, slug, title, body};
 };
 
+/**
+ * Get issues from github repository
+ *
+ * TODO: Limit issues to those labeled with "BLOG_LABEL_NAME"
+ *
+ * @returns {Promise}
+ */
 module.exports = () => new Promise((resolve, reject) => {
     request
         .get(`https://api.github.com/repos/${USERNAME}/${REPOSITORY}/issues`)
