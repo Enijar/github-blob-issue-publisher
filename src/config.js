@@ -5,8 +5,7 @@ module.exports = {
     blogLabel: env.blogLabel,
     username: env.username,
     repository: env.repository,
-    blogsFile: path.resolve(__dirname, '..', 'storage', 'data', 'blogs.json'),
-    pagesPath: path.resolve(__dirname, '..', 'storage', 'pages'),
+    blogsFile: path.resolve(__dirname, '..', 'storage', 'blogs.json'),
     publicPath: path.resolve(__dirname, '..', 'public'),
     viewsPath: path.resolve(__dirname, '..', 'views'),
     port: 3000

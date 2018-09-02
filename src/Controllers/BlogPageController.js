@@ -1,12 +1,13 @@
 const fs = require('fs');
 const path = require('path');
 const config = require('../config');
+const FindBlogBySlug = require('../Functions/FindBlogBySlug');
 
 module.exports = (req, res) => {
-    const {page} = req.params;
-    const pageFile = path.join(config.pagesPath, `${page}.html`);
+    const {slug} = req.params;
+    const blog = FindBlogBySlug(slug);
 
-    if (!fs.existsSync(pageFile)) {
+    if (!blog) {
         res.status(404);
         res.write('404 Page Not Found');
         res.end();
@@ -14,8 +15,7 @@ module.exports = (req, res) => {
     }
 
     const layoutHtml = fs.readFileSync(path.join(config.viewsPath, 'layout', 'app.html'), 'utf-8');
-    const blogHtml = fs.readFileSync(pageFile, 'utf-8');
-    const html = layoutHtml.split('::content::').join(blogHtml);
+    const html = layoutHtml.split('::content::').join(blog.html);
 
     res.write(html);
     res.end();
