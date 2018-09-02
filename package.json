@@ -10,7 +10,7 @@
     "superagent": "^3.8.3"
   },
   "scripts": {
-    "generate-blog-pages": "node src/Commands/GenerateBlogPages",
+    "generate-blog-pages": "node src/Commands/UpdateBlogsFromGithubIssues",
     "watch": "npx nodemon src",
     "start": "node src",
     "test": "echo \"Error: no test specified\" && exit 1"
