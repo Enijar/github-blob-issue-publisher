@@ -16,7 +16,7 @@ const formatIssues = issue => {
  *
  * TODO: Limit issues to those labeled with "BLOG_LABEL_NAME"
  *
- * @returns {Promise}
+ * @returns {Promise<Array>}
  */
 module.exports = () => new Promise((resolve, reject) => {
     request
