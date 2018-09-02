@@ -3,7 +3,6 @@
   "version": "0.0.0",
   "description": "Write your blog post in Github issues and have them automatically published to your blog site.",
   "main": "src/index.js",
-  "homepage": "https://enijar.github.io/github-blob-issue-publisher/",
   "dependencies": {
     "express": "^4.16.3",
     "nodemon": "^1.18.4",
@@ -14,7 +13,6 @@
     "generate-blog-pages": "node src/Commands/UpdateBlogsFromGithubIssues",
     "watch": "npx nodemon src",
     "start": "node src",
-    "deploy": "npx gh-pages -d src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -31,7 +29,5 @@
   "engines": {
     "node": ">=10.0.0"
   },
-  "devDependencies": {
-    "gh-pages": "^1.2.0"
-  }
+  "devDependencies": {}
 }
