@@ -7,5 +7,6 @@ module.exports = {
     blogsFile: path.resolve(__dirname, '..', 'storage', 'blogs.json'),
     publicPath: path.resolve(__dirname, '..', 'public'),
     viewsPath: path.resolve(__dirname, '..', 'views'),
-    port: 3000
+    port: 3000,
+    processUpdateBlogsTimeout: 30000
 };

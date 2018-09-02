@@ -9,4 +9,8 @@ app.use(express.static(config.publicPath));
 
 routes(app);
 
-app.listen(port, () => console.log(`Running app on port ${port}`));
+app.listen(port, () => {
+    require('./Processes');
+
+    console.log(`Running app on port ${port}`);
+});
