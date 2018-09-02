@@ -13,6 +13,7 @@
     "generate-blog-pages": "node src/Commands/UpdateBlogsFromGithubIssues",
     "watch": "npx nodemon src",
     "start": "node src",
+    "deploy": "git push heroku master",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
