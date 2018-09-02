@@ -7,7 +7,7 @@ const filterIssues = issue => {
 
 const formatIssues = issue => {
     const {id, title, body} = issue;
-    const slug = title.replace(/\W+/, '-').toLowerCase();
+    const slug = title.replace(/[\W\s]+/g, '-').toLowerCase();
     return {id, slug, title, body};
 };
 
