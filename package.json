@@ -2,15 +2,23 @@
   "name": "github-blob-issue-publisher",
   "version": "0.0.0",
   "description": "Write your blog post in Github issues and have them automatically published to your blog site.",
-  "main": "index.js",
+  "main": "src/index.js",
   "dependencies": {
     "superagent": "^3.8.3"
   },
-  "devDependencies": {},
   "scripts": {
+    "start": "node src/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": [
+    "blob",
+    "publish",
+    "github",
+    "publisher"
+  ],
+  "author": "James Craig",
+  "license": "ISC",
+  "repository": {
+    "git": "https://github.com/Enijar/github-blob-issue-publisher"
+  }
 }
