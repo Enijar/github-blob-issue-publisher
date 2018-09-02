@@ -1,8 +1,8 @@
 const request = require('superagent');
-const {BLOG_LABEL_NAME, USERNAME, REPOSITORY} = require('../consts');
+const config = require('../config');
 
 const filterIssues = issue => {
-    return issue.labels.find(label => label.name.toLowerCase() === BLOG_LABEL_NAME);
+    return issue.labels.find(label => label.name.toLowerCase() === config.blogLabel);
 };
 
 const formatIssues = issue => {
@@ -14,13 +14,13 @@ const formatIssues = issue => {
 /**
  * Get issues from github repository
  *
- * TODO: Limit issues to those labeled with "BLOG_LABEL_NAME"
+ * TODO: Limit issues to those labeled with "config.blogLabel"
  *
  * @returns {Promise<Array>}
  */
 module.exports = () => new Promise((resolve, reject) => {
     request
-        .get(`https://api.github.com/repos/${USERNAME}/${REPOSITORY}/issues`)
+        .get(`https://api.github.com/repos/${config.username}/${config.repository}/issues`)
         .send()
         .end((err, res) => {
             if (err) {

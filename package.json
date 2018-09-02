@@ -5,11 +5,14 @@
   "main": "src/index.js",
   "dependencies": {
     "express": "^4.16.3",
+    "nodemon": "^1.18.4",
     "showdown": "^1.8.6",
     "superagent": "^3.8.3"
   },
   "scripts": {
-    "start": "node src/index.js",
+    "generate-blog-pages": "node src/Commands/GenerateBlogPages",
+    "watch": "npx nodemon src",
+    "start": "node src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [

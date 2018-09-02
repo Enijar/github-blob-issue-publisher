@@ -2,8 +2,16 @@
 
 Write your blog post in Github issues and have them automatically published to your blog site.
 
-### Running
+### Getting Started
+
+Create the env.json file and update the details to suit your own needs
 
 ```bash
-node src/index.js
+cp env.example.json env.json
+```
+
+Install dependencies
+
+```bash
+npm install
 ```

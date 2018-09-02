@@ -1,13 +1,10 @@
-const FetchBlogs = require('./Commands/FetchBlogs');
-const CreateOrUpdateBlogs = require('./Commands/CreateOrUpdateBlogs');
-const GeneratePagesFromBlogs = require('./Commands/GeneratePagesFromBlogs');
+const express = require('express');
+const config = require('./config');
+const routes = require('./routes');
+const app = express();
 
-(async () => {
-    try {
-        const blogs = await FetchBlogs();
-        await CreateOrUpdateBlogs(blogs);
-        await GeneratePagesFromBlogs();
-    } catch (err) {
-        console.error(err);
-    }
-})();
+app.use(express.static(config.publicPath));
+
+routes(app);
+
+app.listen(config.port, () => console.log(`Running app on port ${config.port}`));
