@@ -1,0 +1,16 @@
+{
+  "name": "github-blob-issue-publisher",
+  "version": "0.0.0",
+  "description": "Write your blog post in Github issues and have them automatically published to your blog site.",
+  "main": "index.js",
+  "dependencies": {
+    "superagent": "^3.8.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
