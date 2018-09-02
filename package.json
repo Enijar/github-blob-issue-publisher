@@ -4,6 +4,8 @@
   "description": "Write your blog post in Github issues and have them automatically published to your blog site.",
   "main": "src/index.js",
   "dependencies": {
+    "express": "^4.16.3",
+    "showdown": "^1.8.6",
     "superagent": "^3.8.3"
   },
   "scripts": {
