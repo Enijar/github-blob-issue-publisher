@@ -13,11 +13,11 @@ const removeExistingBlogs = oldBlogs => newBlog => {
  */
 module.exports = newBlogs => new Promise((resolve, reject) => {
     try {
-        let blogs = [];
+        let blogs = newBlogs;
 
         if (fs.existsSync(BLOGS_FILE)) {
             const oldBlogs = JSON.parse(fs.readFileSync(BLOGS_FILE, 'utf-8') || '[]');
-            blogs = newBlogs.filter(removeExistingBlogs(oldBlogs)).concat(oldBlogs);
+            blogs = oldBlogs.filter(removeExistingBlogs(newBlogs)).concat(newBlogs);
         }
 
         fs.writeFileSync(BLOGS_FILE, JSON.stringify(blogs, null, 2), 'utf-8');

@@ -1,10 +1,10 @@
-const FetchNewBlogs = require('./Commands/FetchNewBlogs');
-const SaveNewBlogs = require('./Commands/SaveNewBlogs');
+const FetchBlogs = require('./Commands/FetchBlogs');
+const CreateOrUpdateBlogs = require('./Commands/CreateOrUpdateBlogs');
 
 (async () => {
     try {
-        const newBlogs = await FetchNewBlogs();
-        await SaveNewBlogs(newBlogs);
+        const blogs = await FetchBlogs();
+        await CreateOrUpdateBlogs(blogs);
     } catch (err) {
         console.error(err);
     }
